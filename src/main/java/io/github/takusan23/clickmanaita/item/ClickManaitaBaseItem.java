@@ -143,7 +143,7 @@ public class ClickManaitaBaseItem extends Item {
      * ツールチップを表示させる。
      */
     @Override
-    public void appendHoverText(ItemStack p_41421_, @Nullable Level p_41422_, List<Component> p_41423_, TooltipFlag p_41424_) {
+    public void appendHoverText(@NotNull ItemStack p_41421_, @Nullable Level p_41422_, @NotNull List<Component> p_41423_, @NotNull TooltipFlag p_41424_) {
         super.appendHoverText(p_41421_, p_41422_, p_41423_, p_41424_);
         MutableComponent text = Component.literal(toolTipText);
         text.setStyle(Style.EMPTY.withColor(TextColor.parseColor(toolTipColor).get().orThrow()));

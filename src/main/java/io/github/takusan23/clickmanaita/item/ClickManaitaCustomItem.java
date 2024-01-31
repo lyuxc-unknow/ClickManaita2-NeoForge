@@ -42,7 +42,7 @@ public class ClickManaitaCustomItem extends ClickManaitaBaseItem {
      * ツールチップを設定する
      */
     @Override
-    public void appendHoverText(ItemStack p_41421_, @org.jetbrains.annotations.Nullable Level p_41422_, List<Component> p_41423_, TooltipFlag p_41424_) {
+    public void appendHoverText(@NotNull ItemStack p_41421_, @org.jetbrains.annotations.Nullable Level p_41422_, @NotNull List<Component> p_41423_, @NotNull TooltipFlag p_41424_) {
         // super.appendHoverText(p_41421_, p_41422_, p_41423_, p_41424_);
         MutableComponent text = Component.literal("x" + getDropSize(p_41421_));
         text.setStyle(Style.EMPTY.withColor(TextColor.parseColor("#ffffff").get().orThrow()));
