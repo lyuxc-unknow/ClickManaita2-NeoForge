@@ -32,6 +32,7 @@ public class ClickManaitaPlayerEvent {
      */
     @SubscribeEvent
     public void onBlockRightClickEvent(PlayerInteractEvent.RightClickBlock event) {
+        if(event.getLevel().isClientSide)return;
         // エンチャントレベル取得
         int enchantLevel = EnchantmentHelper.getEnchantmentLevel(RegisterEnchant.CLICKMANAITA_ENCHANT.get(), event.getEntity());
         // チェスト等インベントリを持つアイテムででスニーク状態じゃない場合はreturn
