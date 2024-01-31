@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -60,7 +61,7 @@ public class ClickManaitaCustomItem extends ClickManaitaBaseItem {
      * チェストの中身も増えるように
      */
     @Override
-    public InteractionResult useOn(UseOnContext p_41427_) {
+    public @NotNull InteractionResult useOn(UseOnContext p_41427_) {
         Level level = p_41427_.getLevel();
         BlockPos blockPos = p_41427_.getClickedPos();
         BlockState blockState = level.getBlockState(blockPos);

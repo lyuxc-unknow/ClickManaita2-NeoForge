@@ -47,7 +47,7 @@ public class ClickManaitaBaseBlock extends Block {
      * 有什么不推荐的吗？
      */
     @Override
-    public @NotNull InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
+    public @NotNull InteractionResult use(@NotNull BlockState blockState, @NotNull Level level, @NotNull BlockPos blockPos, @NotNull Player player, @NotNull InteractionHand interactionHand, @NotNull BlockHitResult blockHitResult) {
         for (int i = 0; i < dropSize; i++) {
             // 复制当前拥有的物品
             ItemStack currentItem = player.getMainHandItem().copy();
