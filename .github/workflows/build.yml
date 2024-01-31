@@ -18,6 +18,14 @@ jobs:
           java-version: '17'
           distribution: 'microsoft'
 
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Clean
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: clean
+
       - name: Build with Gradle
         uses: gradle/gradle-build-action@v2
         with:
@@ -29,5 +37,5 @@ jobs:
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: Mod-Mind-${{ env.SHORT_SHA }}
+          name: ClickManaita-NeoForge-${{ env.SHORT_SHA }}
           path: '**/build/libs/'
